@@ -18,14 +18,16 @@ h2{
   .japanese{
     font-family: Umeboshi;
   }
+
 /*Desktop responsive CSS*/
-@media only screen and (min-width:961px){
+@media only screen and (min-width:1750px){
 
 .navbar {
     overflow: hidden;
     font-family: Roboto, sans-serif;
     position: fixed;
     margin-top: 5px;
+    width: 45%;
   }
   .navbar a {
     float: left;
@@ -36,7 +38,9 @@ h2{
     text-decoration: none;
     padding-left: 25px;
     padding-right: 25px;
+
   }
+  
   .navlink:hover{
     background-color: #F9DC5C;
     color: black;
