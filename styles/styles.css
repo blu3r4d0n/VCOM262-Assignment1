@@ -15,6 +15,9 @@ h1, h2{
 h2{
   color: white;
 }
+  .japanese{
+    font-family: Umeboshi;
+  }
 /*Desktop responsive CSS*/
 @media only screen and (min-width:961px){
 
@@ -63,15 +66,18 @@ h2{
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }
-  .japanese{
-    font-family: Umeboshi;
-  }
+ 
+
 }
 
 
   /* Phone responsive CSS*/
-@media only screen and (max-width:965px){
-    .navbar {
+@media only screen and (max-width:600px){
+  /* just indicate that this is happening now*/
+  body{
+    background-color: blue;
+  }  
+  .navbar {
       display:block;
       overflow: hidden;
       font-family: Roboto, sans-serif;
@@ -92,4 +98,5 @@ h2{
       background-color: #F9DC5C;
       color: black;
   }
+
 }
