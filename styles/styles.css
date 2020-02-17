@@ -1,58 +1,80 @@
 @font-face {
   font-family: Umeboshi;
-  src: url(../umeboshifont/umeboshi_.ttf)
+  src: url(../umeboshifont/umeboshi_.ttf);
 }
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 body {
-  background-color: #FF8936;
+  background-color: #ff8936;
   font-family: Roboto, sans-serif;
   margin: 25px;
   margin-left: 75px;
 }
-h1, h2{
+h1,
+h2 {
   font-size: 72;
 }
-h2{
+h2 {
   color: white;
 }
-  .japanese{
-    font-family: Umeboshi;
-  }
+.japanese {
+  font-family: Umeboshi;
+}
 
 /*Desktop responsive CSS*/
-@media only screen and (min-width:1250px){
-  .contentContainerIndex{
-    margin: auto;
-    width: 65%;
+@media only screen and (min-width: 1250px) {
+  .box{
+    margin:auto;
     padding: 10px;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin-left:7%;
+  }
+  .colBox{
     display:flex;
-    padding: 20px;
-    
+    flex-direction: column;
+  }
+  .contentContainerIndex {
+   
+    display: flex;
+    flex-direction: row;
+    width:100%;
+  
   }
   .ContentTitle {
-      font-size: 22;
+    font-size: 22;
   }
-  .title{
+  .space {
     margin-left: 40px;
   }
-  .contentIndex{
-    text-indent:20px;
+  .contentIndex {
+    text-indent: 20px;
     margin-top: 10px;
-    width: 30%
+    width: 30%;
+  }
+  .aboutContent {
+    text-indent: 20px;
+    margin-top: 10px;
+    background-color:#A8241B;
+    border-radius:25px;
+    padding: 25px;
   }
   img {
-    width: 352;
-    height: 270;
+    max-width: 352;
+    max-height: 270;
+    width: auto;
+    height: auto;
     border-radius: 50px;
   }
-.navbar {
+  .navbar {
     overflow: hidden;
     font-family: Roboto, sans-serif;
     position: fixed;
     margin-top: 5px;
     position: relative;
-    margin:auto;
+    margin: auto;
+    width:100%;
   }
   .navbar a {
     float: left;
@@ -63,13 +85,42 @@ h2{
     text-decoration: none;
     width: 15%;
   }
-  
 
+  figcaption {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 11px;
+  }
 
-.center {
+  .center {
     margin: auto;
     width: 70%;
     padding: 10px;
+  }
+  .centerMap{
+    margin-left: 20%
+  }
+  .aboutContainer{
+    display:flex;
+    flex-direction: row;
+    width: 75%;
+    margin-left:7%;
+  }
+  .aboutContentContainer{
+    background-color: #5C2E2A;
+    color: white;
+    margin: 20px;
+    border-radius:25px;
+    padding: 30px;
+    display:flex;
+    flex-direction: column;
+  
+  }
+  .arata{
+    margin-left:25%;
+  }
+  .aboutImages{
+    margin:3%;
   }
   #home {
     background-color: #db2f23;
@@ -77,52 +128,177 @@ h2{
     border-bottom-left-radius: 25px;
   }
   #about {
-    background-color: #5C140F;
+    background-color: #5c140f;
   }
   #schedule {
-    background-color: #E17068;
+    background-color: #e17068;
   }
   #location {
-    background-color: #5C2E2A;
+    background-color: #5c2e2a;
   }
   #contact {
-    background-color: #A8241B;
+    background-color: #a8241b;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }
- #home:hover, #about:hover, #schedule:hover, #location:hover, #contact:hover {
-    background-color: #F9DC5C;
+  #home:hover,
+  #about:hover,
+  #schedule:hover,
+  #location:hover,
+  #contact:hover {
+    background-color: #f9dc5c;
   }
-  .navlink:hover{
-    background-color: #F9DC5C;
-}
-
-
-  /* Phone responsive CSS*/
-@media only screen and (max-width:600px){
-  /* just indicate that this is happening now*/
-  body{
-    background-color: blue;
-  }  
-  .navbar {
-      display:block;
+  .navlink:hover {
+    background-color: #f9dc5c;
+  }
+  /* Form CSS */
+  .wrapper {
+    background-color: #e17068;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px;
+    width:60%;
+    margin:auto;
+  }
+  .form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5em;
+  }
+  .form-row > label {
+    padding: 0.5em 1em 0.5em 0;
+    flex: 1;
+  }
+  .form-row > input {
+    flex: 2;
+  }
+  .form-row > input,
+  .form-row > button {
+    padding: 0.5em;
+  }
+  .form-row > button {
+    background: #ff8936;
+    color: white;
+    border: 0;
+  }
+  @media screen and (min-width: 768px) {
+    .form-row > input {
+      flex: 3;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .form-row > input {
+      flex: 4;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .form-row > input {
+      flex: 5;
+    }
+    
+  }
+  input{
+    border-radius: 20px;
+    border: 2px solid;
+  }
+  input:focus{
+    border-color: #068a06;
+  }
+    /* Table CSS for Schedule */
+    .tg {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border-color: #ccc;
+    }
+    table{
+      margin: 0 auto;
+    }
+    .table-wrap{
+      margin: auto;
+      
+    }
+    .table td {
+      font-size: 14px;
+      padding: 10px 5px;
+      border-style: solid;
+      border-width: 0px;
       overflow: hidden;
-      font-family: Roboto, sans-serif;
-      position: fixed;
-      margin-top: 5px;
-    }
-    .navbar a {
-      float: left;
-      font-size: 16px;
+      word-break: normal;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+      border-color: #ccc;
+      color: #333;
+      background-color: #a8241b;
       color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      padding-left: 50px;
-      padding-right: 50px;
     }
-    .navlink:hover{
-      background-color: #F9DC5C;
+    .table th {
+      font-size: 14px;
+      font-weight: normal;
+      padding: 10px 5px;
+      border-style: solid;
+      border-width: 0px;
+      overflow: hidden;
+      word-break: normal;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+      border-color: #ccc;
+      color: #333;
+      background-color: #f0f0f0;
+    }
+    #date{
+      color:white;
+      background-color: #db2f23;
+    }
+    #event{
+      color:white;
+      background-color: #e17068;
+    }
+    .table.table-data {
+      border-color: inherit;
+      text-align: left;
+      vertical-align: top;
+    }
+    @media screen and (max-width: 767px) {
+      .table {
+        width: auto !important;
+      }
+      .table col {
+        width: auto !important;
+      }
+      .table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+    iframe{
+      border-radius: 25px;
+    }
+    /* Phone responsive CSS
+    @media only screen and (max-width: 600px) {
+      /* just indicate thatv this is happening now
+      body {
+        background-color: blue;
+      }
+      .navbar {
+        display: block;
+        overflow: hidden;
+        font-family: Roboto, sans-serif;
+        position: fixed;
+        margin-top: 5px;
+      }
+      .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .navlink:hover {
+        background-color: #f9dc5c;
+      }*/
+    }
   }
-
 }
